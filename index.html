@@ -34,6 +34,7 @@
 
   <!-- ================= HERO ================= -->
   <section class="hero" id="top">
+    <img class="hero-skyline" src="assets/skyline.svg" alt="" aria-hidden="true" />
     <div class="container hero-inner">
       <p class="eyebrow on-dark">Finance · Strategy · Transformation · AI</p>
       <h1>Operational leadership for <span class="accent">financial services</span>.</h1>
@@ -78,12 +79,48 @@
       </div>
 
       <div class="grid cols-3">
-        <div class="card"><p class="num">01</p><h3>Financial Services Strategy</h3><p>Sharpening the growth, operating and market strategies of banks, insurers, asset managers and advisory firms — grounded in commercial reality.</p></div>
-        <div class="card"><p class="num">02</p><h3>Operational Transformation</h3><p>Redesigning operating models, processes and cost structures to lift efficiency, resilience and client experience.</p></div>
-        <div class="card"><p class="num">03</p><h3>Leadership Advisory</h3><p>Trusted counsel to executives and boards — from operating model decisions to interim operational leadership.</p></div>
-        <div class="card"><p class="num">04</p><h3>AI Implementation &amp; Enablement</h3><p>Moving AI from pilot to production — high-value use cases, governance, skills and tools that deliver returns responsibly.</p></div>
-        <div class="card"><p class="num">05</p><h3>Training &amp; Capability</h3><p>Practical, role-based programmes that leave lasting capability inside the business, not on the shelf.</p></div>
-        <div class="card"><p class="num">06</p><h3>Outsourced Service Centre Expertise</h3><p>We run the financial operations behind your business — you focus on driving growth with confidence.</p></div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg></span>
+            <span class="num">01</span>
+          </div>
+          <h3>Financial Services Strategy</h3><p>Sharpening the growth, operating and market strategies of banks, insurers, asset managers and advisory firms — grounded in commercial reality.</p>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></span>
+            <span class="num">02</span>
+          </div>
+          <h3>Operational Transformation</h3><p>Redesigning operating models, processes and cost structures to lift efficiency, resilience and client experience.</p>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 3.5a3 3 0 0 1 0 5.8M21 20c0-2.8-1.7-5.2-4-6"/></svg></span>
+            <span class="num">03</span>
+          </div>
+          <h3>Leadership Advisory</h3><p>Trusted counsel to executives and boards — from operating model decisions to interim operational leadership.</p>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-icon"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 10.5h4M10 13.5h4"/><path d="M9 3v2M15 3v2M9 19v2M15 19v2M3 9h2M3 15h2M19 9h2M19 15h2"/></svg></span>
+            <span class="num">04</span>
+          </div>
+          <h3>AI Implementation &amp; Enablement</h3><p>Moving AI from pilot to production — high-value use cases, governance, skills and tools that deliver returns responsibly.</p>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-icon"><svg viewBox="0 0 24 24"><path d="M2 8l10-4 10 4-10 4L2 8z"/><path d="M6 10v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 8v5"/></svg></span>
+            <span class="num">05</span>
+          </div>
+          <h3>Training &amp; Capability</h3><p>Practical, role-based programmes that leave lasting capability inside the business, not on the shelf.</p>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg></span>
+            <span class="num">06</span>
+          </div>
+          <h3>Outsourced Service Centre Expertise</h3><p>We run the financial operations behind your business — you focus on driving growth with confidence.</p>
+        </div>
       </div>
       <p style="margin-top:2rem;"><a class="btn btn-outline-dark" href="services.html">View all services in detail</a></p>
     </div>
@@ -111,22 +148,25 @@
   </section>
 
   <!-- ================= GLOBAL REACH ================= -->
-  <section class="section" id="reach">
+  <section class="section reach" id="reach">
     <div class="container split">
       <div>
         <p class="eyebrow">Global Reach</p>
         <h2>Local insight, global perspective</h2>
-        <p style="color:var(--muted); margin-top:1rem;">
+        <p class="lead-copy">
           Sterling operates across four regions, bringing an international view of financial
           services alongside on-the-ground understanding of each market's regulation, talent
           and operating environment.
         </p>
+        <ul class="reach-regions">
+          <li><b>Europe</b><span>Established markets, complex regulation, cost pressure.</span></li>
+          <li><b>Asia</b><span>High-growth markets and rapid digital adoption.</span></li>
+          <li><b>Middle East</b><span>Ambitious transformation and new financial centres.</span></li>
+          <li><b>Africa</b><span>Emerging opportunity and inclusive finance at scale.</span></li>
+        </ul>
       </div>
-      <div class="panel">
-        <div class="stat"><b>Europe</b><span>Established markets, complex regulation, cost pressure.</span></div>
-        <div class="stat"><b>Asia</b><span>High-growth markets and rapid digital adoption.</span></div>
-        <div class="stat"><b>Middle East</b><span>Ambitious transformation and new financial centres.</span></div>
-        <div class="stat"><b>Africa</b><span>Emerging opportunity and inclusive finance at scale.</span></div>
+      <div>
+        <img class="reach-globe" src="assets/globe.svg" alt="Stylised globe showing Sterling's reach across Europe, Asia, the Middle East and Africa" />
       </div>
     </div>
   </section>
