@@ -41,7 +41,8 @@
       <p class="hero-lead">
         We partner with financial institutions and professional services firms to turn
         strategic intent into operating reality — delivering clarity, capability and
-        measurable impact where it counts.
+        measurable impact where it counts. We don't just advise; we run the operations
+        behind the results.
       </p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="#contact">Start a conversation</a>
@@ -59,10 +60,11 @@
       <p class="eyebrow">Our Positioning</p>
       <h2>Finance. Strategy. Transformation. AI.</h2>
       <div class="divider"></div>
+      <p class="positioning-line">You set the direction &mdash; we make it operational.</p>
       <p>
-        Sterling brings operator-grade expertise to the firms that keep global finance moving —
-        combining deep sector knowledge with hands-on delivery to build organisations that are
-        sharper, leaner and ready for what's next.
+        Sterling brings operator-grade expertise to the firms that keep global finance moving.
+        We combine deep sector knowledge with hands-on delivery &mdash; and, increasingly, with
+        applied AI &mdash; to build organisations that are sharper, leaner and ready for what's next.
       </p>
     </div>
   </section>
@@ -85,7 +87,7 @@
         <div class="card">
           <p class="num">02</p>
           <h3>Operational Transformation</h3>
-          <p>Redesigning target operating models, processes and cost structures to lift efficiency, resilience and client experience across the front, middle and back office.</p>
+          <p>Steer transformation with confidence and clarity. We redesign operating models, processes and cost structures &mdash; and guide and manage delivery &mdash; so you achieve meaningful, lasting change across the front, middle and back office.</p>
         </div>
         <div class="card">
           <p class="num">03</p>
@@ -95,7 +97,7 @@
         <div class="card">
           <p class="num">04</p>
           <h3>AI Implementation &amp; Enablement</h3>
-          <p>Moving AI from pilot to production — identifying high-value use cases, building the governance and skills, and embedding tools that deliver returns responsibly.</p>
+          <p>Move AI from pilot to production. We identify high-value use cases across finance and operations, build the governance and skills, and embed tools that cut manual effort and deliver returns &mdash; responsibly and at scale.</p>
         </div>
         <div class="card">
           <p class="num">05</p>
@@ -105,7 +107,7 @@
         <div class="card">
           <p class="num">06</p>
           <h3>Outsourced Service Centre Expertise</h3>
-          <p>Designing, standing up and optimising shared services and offshore/onshore centres — from location strategy to service quality and continuous improvement.</p>
+          <p>We manage the financial operations behind your business &mdash; from finance, accounting and property portfolios to full shared-service centres. We handle the numbers, so you can focus on driving growth with confidence.</p>
         </div>
       </div>
     </div>
@@ -118,8 +120,9 @@
         <p class="eyebrow">Our Approach</p>
         <h2>Consultants who stay for delivery</h2>
         <p style="color:var(--muted); margin-top:1rem;">
-          We don't hand over a strategy and walk away. Sterling works alongside your people to
-          design, deliver and embed change — so the impact outlasts the engagement.
+          We don't hand over a strategy and walk away. From boardroom advisory to fully
+          outsourced operations, Sterling works alongside your people to design, deliver and
+          embed change &mdash; so the impact outlasts the engagement.
         </p>
         <ul class="approach-list">
           <li><span class="step">01</span><span><strong>Understand</strong><span>We start with the commercial and operational reality — the numbers, the people and the constraints.</span></span></li>
@@ -148,11 +151,11 @@
         <span class="tag">Banking &amp; Capital Markets</span>
         <span class="tag">Asset &amp; Wealth Management</span>
         <span class="tag">Insurance</span>
+        <span class="tag">Real Estate &amp; Real Assets</span>
         <span class="tag">Payments &amp; Fintech</span>
         <span class="tag">Private Equity &amp; Advisory</span>
         <span class="tag">Professional Services</span>
         <span class="tag">Shared Services &amp; GBS</span>
-        <span class="tag">Regulators &amp; Market Infrastructure</span>
       </div>
     </div>
   </section>
@@ -187,14 +190,52 @@
 
   <!-- ================= CONTACT ================= -->
   <section class="section contact" id="contact">
-    <div class="container">
+    <div class="container contact-inner">
       <div class="section-head">
         <p class="eyebrow">Get in Touch</p>
-        <h2>Let's talk about what's next</h2>
-        <p>Whether you're shaping a strategy, standing up a new capability or delivering change under pressure — we'd like to hear about it.</p>
+        <h2>Let's discuss your requirements</h2>
+        <p>Reach out to explore how our expertise can empower your strategy, operations and AI agenda &mdash; and drive measurable success.</p>
       </div>
-      <a class="contact-email" href="mailto:hello@example.com">hello@sterlingconsultancy.com</a>
-      <p class="contact-note">Placeholder email — to be confirmed once the domain is registered.</p>
+
+      <!--
+        NOTE: this form needs an endpoint to actually send.
+        Two zero-backend options once hosting is chosen:
+          • Netlify Forms  -> add `netlify` to the <form> tag (works automatically on Netlify)
+          • Formspree      -> set action="https://formspree.io/f/XXXX" and method="POST"
+        Until then it falls back to opening the visitor's email client (see script at page end).
+      -->
+      <form class="contact-form" id="contact-form" action="#" method="POST" novalidate>
+        <div class="field-row">
+          <label class="field">
+            <span>First name *</span>
+            <input type="text" name="first_name" required autocomplete="given-name" />
+          </label>
+          <label class="field">
+            <span>Last name *</span>
+            <input type="text" name="last_name" required autocomplete="family-name" />
+          </label>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span>Email *</span>
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+          <label class="field">
+            <span>Company</span>
+            <input type="text" name="company" autocomplete="organization" />
+          </label>
+        </div>
+        <label class="field">
+          <span>How can we help? *</span>
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="btn btn-gold" type="submit">Send enquiry</button>
+      </form>
+
+      <p class="contact-note">
+        Prefer email? <a href="mailto:hello@sterlingconsultancy.com">hello@sterlingconsultancy.com</a>
+        &nbsp;·&nbsp; Placeholder address &mdash; to be confirmed once the domain is registered.
+      </p>
     </div>
   </section>
 
@@ -221,6 +262,29 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    /* Temporary fallback: until the form is wired to Netlify/Formspree, submitting
+       composes an email to the (placeholder) inbox so nothing is silently lost. */
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form || form.getAttribute('action') !== '#') return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        var d = new FormData(form);
+        var subject = 'Website enquiry — ' + (d.get('first_name') || '') + ' ' + (d.get('last_name') || '');
+        var body =
+          'Name: ' + (d.get('first_name') || '') + ' ' + (d.get('last_name') || '') + '\n' +
+          'Email: ' + (d.get('email') || '') + '\n' +
+          'Company: ' + (d.get('company') || '') + '\n\n' +
+          (d.get('message') || '');
+        window.location.href = 'mailto:hello@sterlingconsultancy.com'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
+      });
+    })();
+  </script>
 
 </body>
 </html>
