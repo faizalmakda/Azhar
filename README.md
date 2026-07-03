@@ -27,15 +27,12 @@ Multi-page marketing site, built as **dependency-free static HTML/CSS** so it:
 ## Live preview (GitHub Pages)
 
 `.github/workflows/deploy.yml` publishes the site to a free `*.github.io` URL on every push
-to the working branch. **One-time setup** (needs a repo admin, ~30 seconds):
+to the working branch. The workflow **enables Pages automatically** (`enablement: true`), so
+no manual Settings step is normally needed — the live URL appears in the workflow run summary
+(Actions tab → latest run → "deploy" job → environment URL) and under Settings → Pages.
 
-1. GitHub → repo **Settings → Pages**
-2. Under **Build and deployment → Source**, choose **GitHub Actions**
-3. Re-run the "Deploy site to GitHub Pages" workflow (Actions tab) — or just push again
-
-The live URL then appears in the workflow run summary and under Settings → Pages.
-*If the run fails with an environment/branch protection error, either allow this branch in
-the `github-pages` environment (Settings → Environments) or merge the branch to `main`.*
+*If auto-enable is blocked (e.g. org policy), enable it once manually: repo **Settings → Pages
+→ Build and deployment → Source → GitHub Actions**, then re-run the workflow.*
 
 ## Brand palette
 
