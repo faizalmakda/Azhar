@@ -7,20 +7,35 @@ the domain is confirmed).
 
 ## Status
 
-First-pass, single-page marketing site. Built as **dependency-free static HTML/CSS** so it:
+Multi-page marketing site, built as **dependency-free static HTML/CSS** so it:
 
 - previews instantly (just open `index.html`),
 - hosts anywhere for free (GitHub Pages / Netlify / Vercel) — no build step, no domain needed,
 - re-brands trivially when the final name is chosen.
 
-## Structure
+## Pages
 
-```
-index.html          # the whole site (one-page scroll)
-assets/
-  styles.css        # all styling; brand palette defined once at the top (:root)
-  logo-mark.svg     # placeholder S + skyline mark (logo is "subject to change")
-```
+| File | Page |
+|------|------|
+| `index.html` | Home — hero, positioning, services overview, approach, global reach, CTA |
+| `services.html` | What We Do — the six services in detail |
+| `about.html` | About — story, approach, sectors, team (placeholder) |
+| `contact.html` | Contact — "Let's discuss your requirements" form |
+| `assets/styles.css` | All styling; brand palette defined once at the top (`:root`) |
+| `assets/logo-mark.svg` | Placeholder S + skyline mark (logo is "subject to change") |
+
+## Live preview (GitHub Pages)
+
+`.github/workflows/deploy.yml` publishes the site to a free `*.github.io` URL on every push
+to the working branch. **One-time setup** (needs a repo admin, ~30 seconds):
+
+1. GitHub → repo **Settings → Pages**
+2. Under **Build and deployment → Source**, choose **GitHub Actions**
+3. Re-run the "Deploy site to GitHub Pages" workflow (Actions tab) — or just push again
+
+The live URL then appears in the workflow run summary and under Settings → Pages.
+*If the run fails with an environment/branch protection error, either allow this branch in
+the `github-pages` environment (Settings → Environments) or merge the branch to `main`.*
 
 ## Brand palette
 
@@ -34,28 +49,30 @@ assets/
 Fonts: **Cormorant Garamond** (display serif) + **Montserrat** (sans) via Google Fonts,
 with system fallbacks.
 
-## Renaming later (when the domain lands)
-
-The name appears in a small, known set of places:
-- `index.html` — `<title>`, brand blocks, footer, contact email
-- `assets/styles.css` — the `:root` palette (colours only; no name)
-- `README.md`
-
-A find-and-replace of "Sterling Consultancy" plus the email/domain is all that's needed.
-
 ## Placeholders to confirm
 
-- **Contact email** (`index.html` → `#contact`) — currently `hello@sterlingconsultancy.com`.
-- **Real content** — services copy is written to be credible for a FS consultancy but should
-  be reconciled against the old site (`realassetsolutions.co.uk`) and the client's own wording.
+- **Company name** — "Sterling Consultancy" throughout (final name pending domain).
+- **Contact email** — `hello@sterlingconsultancy.com` (placeholder).
+- **Team** (`about.html`) — names/roles/bios are placeholders, marked *subject to change*.
+- **Story** (`about.html`) — draft heritage narrative, marked *subject to change*.
 - **Logo** — SVG is a placeholder approximation of the brand mark.
+- **Contact form** — needs an endpoint to actually send (see below). Falls back to `mailto:` for now.
+
+### Wiring the contact form (once hosting is chosen)
+
+- **Netlify:** add `netlify` attribute to the `<form>` tag — forms work automatically.
+- **Formspree:** set `action="https://formspree.io/f/XXXX"` and `method="POST"`.
+
+## Renaming later (when the domain lands)
+
+Find-and-replace "Sterling Consultancy" + the email/domain across the `.html` files. Colours
+live only in `assets/styles.css` (`:root`); the name never appears there.
 
 ## Roadmap (post-domain)
 
 - [ ] Confirm final name + register domain
 - [ ] Swap in real logo files
-- [ ] Fold in real content from the previous site / client
-- [ ] Add About / Team and per-sector or per-service detail pages
-- [ ] Wire up a real contact form (or `mailto:`) + branded email
-- [ ] Deploy to a live host and point DNS
+- [ ] Add real team names/bios and finalise the story
+- [ ] Wire up the contact form + branded email
+- [ ] Point a custom domain at the deployment (add `CNAME`)
 - [ ] SEO metadata, OG image, analytics, cookie/privacy pages

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Sterling Consultancy</title>
+  <meta name="description" content="Get in touch with Sterling Consultancy to discuss your strategy, operations and AI agenda across financial services." />
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Sterling Consultancy home">
+        <img src="assets/logo-mark.svg" alt="" />
+        <span class="brand-text"><span class="brand-name">STERLING</span><span class="brand-sub">Consultancy</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="services.html">What We Do</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active" aria-current="page">Contact</a>
+        <a class="btn btn-gold" href="contact.html">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <p class="breadcrumb"><a href="index.html">Home</a> / Contact</p>
+      <h1>Let's discuss your requirements</h1>
+      <p>Reach out to explore how our expertise can empower your strategy, operations and AI agenda — and drive measurable success.</p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT FORM ================= -->
+  <section class="section contact">
+    <div class="container contact-inner">
+      <!--
+        NOTE: this form needs an endpoint to actually send.
+        Two zero-backend options once hosting is chosen:
+          • Netlify Forms  -> add `netlify` to the <form> tag (works automatically on Netlify)
+          • Formspree      -> set action="https://formspree.io/f/XXXX" and method="POST"
+        Until then it falls back to opening the visitor's email client (see script at page end).
+      -->
+      <form class="contact-form" id="contact-form" action="#" method="POST" novalidate>
+        <div class="field-row">
+          <label class="field"><span>First name *</span><input type="text" name="first_name" required autocomplete="given-name" /></label>
+          <label class="field"><span>Last name *</span><input type="text" name="last_name" required autocomplete="family-name" /></label>
+        </div>
+        <div class="field-row">
+          <label class="field"><span>Email *</span><input type="email" name="email" required autocomplete="email" /></label>
+          <label class="field"><span>Company</span><input type="text" name="company" autocomplete="organization" /></label>
+        </div>
+        <label class="field"><span>How can we help? *</span><textarea name="message" rows="5" required></textarea></label>
+        <button class="btn btn-gold" type="submit">Send enquiry</button>
+      </form>
+
+      <p class="contact-note">
+        Prefer email? <a href="mailto:hello@sterlingconsultancy.com">hello@sterlingconsultancy.com</a>
+        &nbsp;·&nbsp; Placeholder address &mdash; to be confirmed once the domain is registered.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">STERLING</span><div class="brand-sub">Consultancy</div>
+          <p style="margin-top:1rem; max-width:320px;">Operational leadership for financial services — Finance · Strategy · Transformation · AI.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="services.html">What We Do</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Sterling Consultancy. All rights reserved.</span>
+        <span>Europe · Asia · Middle East · Africa</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form || form.getAttribute('action') !== '#') return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        var d = new FormData(form);
+        var subject = 'Website enquiry — ' + (d.get('first_name') || '') + ' ' + (d.get('last_name') || '');
+        var body =
+          'Name: ' + (d.get('first_name') || '') + ' ' + (d.get('last_name') || '') + '\n' +
+          'Email: ' + (d.get('email') || '') + '\n' +
+          'Company: ' + (d.get('company') || '') + '\n\n' +
+          (d.get('message') || '');
+        window.location.href = 'mailto:hello@sterlingconsultancy.com'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
+      });
+    })();
+  </script>
+
+</body>
+</html>
