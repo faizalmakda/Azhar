@@ -289,10 +289,19 @@ a { color: inherit; text-decoration: none; }
    ========================================================================= */
 .service-row {
   display: grid; grid-template-columns: 90px 1fr; gap: clamp(20px, 4vw, 48px);
-  padding-block: clamp(34px, 5vw, 52px); border-top: 1px solid var(--line);
-  align-items: start;
+  padding: clamp(28px, 4vw, 46px); margin-bottom: 22px; border-radius: 6px;
+  border: 1px solid var(--line); background: #fff; align-items: start;
 }
-.service-row:first-of-type { border-top: 0; }
+/* Alternate rows in navy to break up the white */
+.service-row:nth-child(even) {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-800) 100%);
+  border-color: transparent; color: #fff;
+}
+.service-row:nth-child(even) h3 { color: #fff; }
+.service-row:nth-child(even) .lead { color: rgba(255,255,255,0.82); }
+.service-row:nth-child(even) li { color: rgba(255,255,255,0.9); }
+.service-row:nth-child(even) .s-num { color: var(--gold-soft); }
+.service-row:nth-child(even) .row-icon { color: var(--gold-soft); }
 .service-row .s-col { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .service-row .s-num { font-family: var(--serif); font-style: italic; font-size: 2.4rem; color: var(--gold); line-height: 1; }
 .service-row .row-icon { display: inline-flex; width: 44px; height: 44px; color: var(--gold); flex: none; }
@@ -326,6 +335,24 @@ a { color: inherit; text-decoration: none; }
 .team-card h3 { font-size: 1.15rem; color: var(--navy); }
 .team-card .role { color: var(--gold); font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
 .team-card p { color: var(--muted); font-size: 0.9rem; margin-top: 0.8rem; margin-bottom: 0; }
+
+/* =========================================================================
+   Services section — dark variant (home)
+   ========================================================================= */
+.section.services-dark {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-800) 60%, #081527 100%);
+  color: #fff;
+}
+.services-dark .eyebrow { color: var(--gold-soft); }
+.services-dark .section-head h2 { color: #fff; }
+.services-dark .section-head p { color: rgba(255,255,255,0.75); }
+.services-dark .grid { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.12); }
+.services-dark .card { background: #0f2440; }
+.services-dark .card:hover { background: #16294a; }
+.services-dark .card h3 { color: #fff; }
+.services-dark .card p { color: rgba(255,255,255,0.72); }
+.services-dark .card .num { color: rgba(228,200,119,0.45); }
+.services-dark .card-icon { color: var(--gold-soft); }
 
 /* =========================================================================
    Global reach (dark, with globe)
