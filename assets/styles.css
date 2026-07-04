@@ -337,6 +337,21 @@ a { color: inherit; text-decoration: none; }
 .team-card p { color: var(--muted); font-size: 0.9rem; margin-top: 0.8rem; margin-bottom: 0; }
 
 /* =========================================================================
+   Generic dark section
+   ========================================================================= */
+.section.dark {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-800) 60%, #081527 100%);
+  color: #fff;
+}
+.section.dark .eyebrow { color: var(--gold-soft); }
+.section.dark h2 { color: #fff; }
+.section.dark p { color: rgba(255,255,255,0.8); }
+.section.dark .approach-list li { border-color: rgba(255,255,255,0.15); }
+.section.dark .approach-list .step { color: var(--gold-soft); }
+.section.dark .approach-list strong { color: #fff; }
+.section.dark .approach-list span { color: rgba(255,255,255,0.72); }
+
+/* =========================================================================
    Services section — dark variant (home)
    ========================================================================= */
 .section.services-dark {
